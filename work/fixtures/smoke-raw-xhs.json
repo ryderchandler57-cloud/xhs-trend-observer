@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "platform": "xiaohongshu",
+    "queries": [
+      "AI 传统行业 真实变化",
+      "高铁 城市流动 年轻人 周末",
+      "考研 调剂 导师 体制 真实",
+      "消费降级 品牌分层 平替"
+    ],
+    "collected_at": "2026-06-02T15:00:00+08:00",
+    "request_topic": "趋势观察 smoke test",
+    "collection_mode": "fixture",
+    "sample_fixture": true
+  },
+  "records": [
+    {
+      "id": "fixture-ai-factory-001",
+      "url": "https://www.xiaohongshu.com/explore/fixture-ai-factory-001",
+      "query": "AI 传统行业 真实变化",
+      "title": "县城小工厂开始用AI做报价和客服，老板说不是省人是抢订单",
+      "author": "样例作者A",
+      "text": "一个做金属件的小工厂把常见型号、报价规则、交期和售后问题整理成知识库，客服先用AI生成报价草稿，再由老员工确认。老板说真正节省的是反复沟通和新人培训时间，接单速度从半天压到几十分钟。不是所有岗位消失，而是懂工艺又会整理数据的人更值钱。",
+      "comments": [
+        "我们这边包装厂今年也在试，客户凌晨问价也能先回，第二天人工确认，订单不会流失。",
+        "别神化，非标件还是老师傅说了算，但是标准件报价确实快很多。",
+        "成本不是软件钱，是前期把型号、材料、损耗率整理清楚，很多小厂卡在这里。",
+        "我家做外贸，AI翻译邮件有用，但真正决定利润的是交期和汇率。"
+      ],
+      "like_count": 3200,
+      "collect_count": 1180,
+      "comment_count": 146,
+      "created_at": "2026-05-21",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-rail-city-002",
+      "url": "https://www.xiaohongshu.com/explore/fixture-rail-city-002",
+      "query": "高铁 城市流动 年轻人 周末",
+      "title": "为什么越来越多人住二线，在一线接项目，周末高铁像通勤车",
+      "author": "样例作者B",
+      "text": "身边很多自由职业和项目制岗位的人，不再把居住城市和赚钱城市绑定。高铁两小时圈让省会、强二线和一线城市形成新的生活半径。看起来是年轻人爱折腾，背后其实是房租、票价、项目机会和家庭资源重新组合。",
+      "comments": [
+        "合肥到上海周末票经常满，不是旅游，很多是去见客户或者面试。",
+        "我在长沙住，深圳接单，一个月去2次，房租差价能覆盖高铁。",
+        "这个前提是不用每天坐班，传统岗位还是很难。",
+        "机场反而不如高铁稳定，市区到机场时间太不可控。"
+      ],
+      "like_count": 5700,
+      "collect_count": 2410,
+      "comment_count": 309,
+      "created_at": "2026-05-18",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-edu-system-003",
+      "url": "https://www.xiaohongshu.com/explore/fixture-edu-system-003",
+      "query": "考研 调剂 导师 体制 真实",
+      "title": "考研调剂不是捡漏，是系统名额、导师资源和风险控制的再分配",
+      "author": "样例作者C",
+      "text": "很多同学以为调剂只看分数，实际还看专业匹配、导师有没有名额、课题组经费、学校是否怕学生中途退学，以及本科背景能否降低培养风险。中科院和高校的逻辑也不同：平台光环之外，更要看课题组资源、毕业要求和就业路径。",
+      "comments": [
+        "今年我们学院调剂先看本科专业课匹配，不是只按分数从高到低。",
+        "导师没经费真的别去，后面做实验和发文章都会卡。",
+        "中科院所之间差别很大，不能只看名字，建议问直系师兄师姐毕业年限。",
+        "调剂系统开放时间短，信息差主要在提前联系和确认名额。"
+      ],
+      "like_count": 8800,
+      "collect_count": 5300,
+      "comment_count": 512,
+      "created_at": "2026-04-29",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-consumer-004",
+      "url": "https://www.xiaohongshu.com/explore/fixture-consumer-004",
+      "query": "消费降级 品牌分层 平替",
+      "title": "不是消费降级，是大家开始把品牌溢价拆成面子、功能和渠道",
+      "author": "样例作者D",
+      "text": "同一个人会买高端护肤，也会买白牌收纳；会为了售后买官方渠道，也会为了低价蹲产业带直播。表面是消费降级，背后是品牌的情绪价值、功能价值、渠道信任和售后保障被拆开比较。",
+      "comments": [
+        "我现在大件买品牌，小件买平替，不是没钱，是不想为看不见的部分付钱。",
+        "今年很多国货不是便宜，是供应链成熟了，包装和渠道也跟上了。",
+        "别忘了售后，家电平替踩雷一次就知道品牌还是有价值。",
+        "直播间价格低，但退换货和版本差异要看清楚。"
+      ],
+      "like_count": 7600,
+      "collect_count": 4100,
+      "comment_count": 428,
+      "created_at": "2026-05-10",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-east-asia-005",
+      "url": "https://www.xiaohongshu.com/explore/fixture-east-asia-005",
+      "query": "日本 韩国 台湾 中国 产业链 历史",
+      "title": "东亚品牌吵得很凶，但供应链其实互相嵌得很深",
+      "author": "样例作者E",
+      "text": "很多消费电子、面板、半导体设备、化妆品原料和服装代工都不是单一国家完成的。日本强在材料和设备，韩国强在品牌和部分核心制造，台湾在代工和芯片生态，大陆在规模制造、渠道和新品牌速度。情绪叙事之外，产业链现实更复杂。",
+      "comments": [
+        "做外贸的都知道，客户嘴上要国产，实际BOM里很多日韩台零件。",
+        "不是谁离不开谁，是替代要时间和验证成本，特别是材料和设备。",
+        "化妆品原料这块日本供应商很多，但国内品牌包装和渠道反应快。",
+        "产业转移不是一夜完成，东南亚也要看工程师和配套。"
+      ],
+      "like_count": 4500,
+      "collect_count": 2600,
+      "comment_count": 198,
+      "created_at": "2026-05-01",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-tech-service-007",
+      "url": "https://www.xiaohongshu.com/explore/fixture-tech-service-007",
+      "query": "AI 传统行业 真实变化",
+      "title": "汽修店用AI做故障预判，真正省下的是师傅解释成本",
+      "author": "样例作者G",
+      "text": "一家汽修店把常见车型、故障码、维修报价和客户追问整理成问答库。AI不能替代老师傅修车，但能把客户最常问的价格、风险和耗时先解释清楚。表面是AI进汽修，背后是服务行业把经验话术标准化，减少信任成本。",
+      "comments": [
+        "我们店今年也试了，客户最怕被坑，先把报价范围和风险讲清楚，成交率反而高。",
+        "故障判断还是要看车况，但解释保养项目确实省时间。",
+        "最大问题是数据要自己整理，平台模板没法直接用。",
+        "客户不是不愿意花钱，是不知道钱花在哪里。"
+      ],
+      "like_count": 4200,
+      "collect_count": 1890,
+      "comment_count": 231,
+      "created_at": "2026-05-25",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-agri-ai-008",
+      "url": "https://www.xiaohongshu.com/explore/fixture-agri-ai-008",
+      "query": "农业 AI 传统产业 信息差",
+      "title": "不是年轻人突然爱种地，是农业开始变成设备、渠道和数据的生意",
+      "author": "样例作者H",
+      "text": "很多返乡种植账号看起来像田园生活，实际在讨论冷链、直播渠道、传感器、病虫害识别和订单农业。农业不是轻松回归自然，而是从体力密集转向设备、数据和渠道密集。懂技术和懂销路的人比单纯会种更有优势。",
+      "comments": [
+        "我们这边果园今年装了传感器，少浇几次水省的不只是水费，还有人工。",
+        "直播卖货看着热闹，真正难的是稳定品控和售后。",
+        "订单农业不是稳赚，客户压价和天气风险都在。",
+        "返乡可以，但先看冷链和仓储，别只看风景。"
+      ],
+      "like_count": 5100,
+      "collect_count": 2500,
+      "comment_count": 276,
+      "created_at": "2026-05-17",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-social-rule-009",
+      "url": "https://www.xiaohongshu.com/explore/fixture-social-rule-009",
+      "query": "社会规则 人情 真实逻辑",
+      "title": "为什么很多事不是按流程办，而是先确认谁承担风险",
+      "author": "样例作者I",
+      "text": "在单位、学校和小城市办事时，很多人以为卡在关系，其实卡在责任归属。流程只是明面规则，真正影响效率的是谁签字、谁背锅、谁能解释异常情况。人情有时不是特权，而是降低不确定性的信用背书。",
+      "comments": [
+        "体制内很多表格不是没人会填，是没人愿意为边界情况负责。",
+        "熟人好办事的本质是对方知道你不会出问题，出了问题也找得到人。",
+        "也别美化人情，资源不对等时普通人确实吃亏。",
+        "合同和留痕越来越重要，就是为了把风险说清楚。"
+      ],
+      "like_count": 6900,
+      "collect_count": 3300,
+      "comment_count": 402,
+      "created_at": "2026-05-14",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-online-mood-010",
+      "url": "https://www.xiaohongshu.com/explore/fixture-online-mood-010",
+      "query": "互联网情绪 经济变化 评论区",
+      "title": "大家不是突然讨厌精致生活，是收入预期变了以后开始反感被教育消费",
+      "author": "样例作者J",
+      "text": "以前内容平台鼓励精致生活，很多人愿意为仪式感买单。现在评论区对高价生活方式更敏感，不是审美突然变差，而是就业、工资和房租让人重新计算每一笔消费的安全感。情绪背后是收入预期和资产预期的变化。",
+      "comments": [
+        "今年工资没涨，房租涨了300，看博主说松弛感真的会烦。",
+        "不是不买好东西，是不想被暗示不买就不够体面。",
+        "裁员后我更看售后和耐用，不看开箱氛围了。",
+        "平台还是推高客单价内容，因为商家投放逻辑没变。"
+      ],
+      "like_count": 9200,
+      "collect_count": 4600,
+      "comment_count": 688,
+      "created_at": "2026-05-28",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-young-life-011",
+      "url": "https://www.xiaohongshu.com/explore/fixture-young-life-011",
+      "query": "年轻人 生活方式 变了 为什么",
+      "title": "年轻人开始把生活拆成可撤退的小单元：租房、搭子、副业、短途",
+      "author": "样例作者K",
+      "text": "越来越多人不再追求一步到位的稳定生活，而是把居住、社交、职业和消费拆成能随时调整的小单元。搭子、短租、周末高铁、副业和二手平台，本质都是降低试错成本，让自己不被单一城市、单一关系和单一工作锁死。",
+      "comments": [
+        "我现在租房家具都买二手，换城市损失小很多。",
+        "搭子不是不重视朋友，是大家时间和预算都碎片化了。",
+        "副业不一定赚钱，但能缓解被公司拿捏的感觉。",
+        "高铁两小时真的改变生活半径，周末能去另一个城市见朋友。"
+      ],
+      "like_count": 8300,
+      "collect_count": 3900,
+      "comment_count": 521,
+      "created_at": "2026-05-23",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-state-enterprise-012",
+      "url": "https://www.xiaohongshu.com/explore/fixture-state-enterprise-012",
+      "query": "国企 编制 年轻人 真实体验",
+      "title": "年轻人重新想进国企，不只是求稳，是在给不确定性定价",
+      "author": "样例作者L",
+      "text": "很多人把国企热理解成躺平，其实更像风险定价。互联网岗位的工资上限高，但裁员和城市成本也高；国企的现金工资未必最好，但社保、地域稳定、组织信用和家庭预期更可计算。选择变了，是外部不确定性变了。",
+      "comments": [
+        "我从私企回央企，工资少了20%，但不用每季度担心部门没了。",
+        "也不是都稳定，项目制国企和传统单位差别很大。",
+        "小城市国企的价值不只是工资，还有本地关系和房贷压力。",
+        "年轻人不是不拼，是怕拼完平台规则又变。"
+      ],
+      "like_count": 10100,
+      "collect_count": 6200,
+      "comment_count": 811,
+      "created_at": "2026-05-12",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-flight-rail-013",
+      "url": "https://www.xiaohongshu.com/explore/fixture-flight-rail-013",
+      "query": "民航 高铁 人口流动 真实原因",
+      "title": "短途民航越来越尴尬，不是飞机慢，是城市到机场的时间太贵",
+      "author": "样例作者M",
+      "text": "很多两三小时航线被高铁挤压，不只是票价问题。机场离市区远、安检候机不可控、延误风险高，而高铁站更靠近城市中心，时间确定性更强。交通竞争改变的是城市之间的真实时间成本。",
+      "comments": [
+        "南京到上海坐飞机完全没意义，机场来回时间比飞行还长。",
+        "商务出行最怕不可控，高铁能开会能改签。",
+        "机场还是长距离有优势，短距离主要输在前后时间。",
+        "很多城市高铁站位置好，直接改变消费流向。"
+      ],
+      "like_count": 6100,
+      "collect_count": 2700,
+      "comment_count": 331,
+      "created_at": "2026-05-08",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-brand-channel-014",
+      "url": "https://www.xiaohongshu.com/explore/fixture-brand-channel-014",
+      "query": "消费升级 品牌分层 渠道",
+      "title": "同一个品牌在商场、直播间、奥莱像三个品牌，消费分层藏在渠道里",
+      "author": "样例作者N",
+      "text": "消费者以为自己在比较品牌，其实在比较渠道版本、售后承诺和价格歧视。商场提供体验和即时服务，直播间提供低价和冲动，奥莱处理库存。品牌分层不只发生在人群之间，也发生在同一品牌的不同渠道。",
+      "comments": [
+        "直播间便宜但版本和赠品经常不同，不能只比标价。",
+        "奥莱很多是专供款，别拿商场同款逻辑去买。",
+        "我愿意为官方售后多付一点，退换货省心。",
+        "品牌现在不是一个价格体系，是很多渠道在分层。"
+      ],
+      "like_count": 7300,
+      "collect_count": 3600,
+      "comment_count": 474,
+      "created_at": "2026-05-19",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-east-asia-beauty-015",
+      "url": "https://www.xiaohongshu.com/explore/fixture-east-asia-beauty-015",
+      "query": "日本 韩国 台湾 中国 产业链 历史",
+      "title": "国货美妆崛起背后，也有日韩原料、台湾代工和大陆渠道速度",
+      "author": "样例作者O",
+      "text": "很多国货美妆看起来是品牌故事胜利，背后其实是东亚供应链协作：日本原料和检测经验、韩国包材与审美、台湾和大陆代工、大陆内容平台和渠道速度。真正的变化是品牌端离消费者更近，供应链被重新组织。",
+      "comments": [
+        "做包材的朋友说很多爆款不是完全从零开始，是成熟供应链换了品牌打法。",
+        "日韩原料稳定，但国内品牌上新和反馈速度快很多。",
+        "台湾代工厂在护肤和彩妆里存在感一直不低。",
+        "消费者看到的是国货，行业看到的是供应链重组。"
+      ],
+      "like_count": 3900,
+      "collect_count": 2100,
+      "comment_count": 187,
+      "created_at": "2026-05-03",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-counterintuitive-016",
+      "url": "https://www.xiaohongshu.com/explore/fixture-counterintuitive-016",
+      "query": "表面看不懂 背后逻辑",
+      "title": "为什么越贵的课越有人买，便宜课反而没人坚持",
+      "author": "样例作者P",
+      "text": "表面看是智商税，背后可能是承诺成本和社群约束。便宜课买了没有损失，放弃成本很低；贵课让人更愿意投入时间，也通过打卡、社群和老师反馈制造外部约束。但这不代表贵课一定好，只说明价格也在塑造行为。",
+      "comments": [
+        "我买99元课基本不看，买3000元课会逼自己交作业。",
+        "也有很多贵课包装过度，核心还是老师反馈和同伴压力。",
+        "价格不是知识价值，是承诺机制的一部分。",
+        "机构最会利用沉没成本，所以要先看试听和退款规则。"
+      ],
+      "like_count": 6800,
+      "collect_count": 4100,
+      "comment_count": 389,
+      "created_at": "2026-05-06",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-factory-brand-017",
+      "url": "https://www.xiaohongshu.com/explore/fixture-factory-brand-017",
+      "query": "老行业 数字化 不是互联网",
+      "title": "产业带老板开始做自有品牌，不是想当网红，是代工利润被压太薄",
+      "author": "样例作者Q",
+      "text": "很多产业带工厂做账号，不是为了内容梦想，而是代工利润被渠道和客户压缩后，想直接接近终端消费者。短视频和小红书让工厂第一次能低成本展示工艺、材料和交付能力。难点是品牌、售后和库存管理，不是拍视频本身。",
+      "comments": [
+        "我们厂代工毛利只有几个点，自有品牌卖出去一单顶好几单代工。",
+        "老板以为拍视频就能卖，后来发现售后和库存才是大头。",
+        "产业带账号最有价值的是让消费者看懂材料差异。",
+        "渠道客户会不高兴，所以很多工厂不敢明着做。"
+      ],
+      "like_count": 5600,
+      "collect_count": 2900,
+      "comment_count": 256,
+      "created_at": "2026-05-16",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-city-home-018",
+      "url": "https://www.xiaohongshu.com/explore/fixture-city-home-018",
+      "query": "返乡 县城 年轻人 生活方式",
+      "title": "返乡不是回到过去，而是在用县城成本接一线城市信息",
+      "author": "样例作者R",
+      "text": "一些年轻人回县城后并不是完全退出竞争，而是用低房租、家庭支持和熟人资源降低生活成本，同时通过线上项目、外地客户和高铁保持外部连接。县城不再只是退路，也可能成为低成本试错基地。",
+      "comments": [
+        "我回县城后每月固定成本少了4000，但客户还是杭州和上海。",
+        "前提是有线上技能，否则县城岗位天花板很低。",
+        "熟人社会有帮助也有压力，边界感要自己守。",
+        "高铁站开通后，我们这边周末去省会的人明显多了。"
+      ],
+      "like_count": 8700,
+      "collect_count": 4400,
+      "comment_count": 566,
+      "created_at": "2026-05-27",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-traditional-logistics-019",
+      "url": "https://www.xiaohongshu.com/explore/fixture-traditional-logistics-019",
+      "query": "传统产业 物流 仓储 供应链 真实",
+      "title": "仓储物流这种老行业突然被年轻人重看，因为现金流比想象中真实",
+      "author": "样例作者S",
+      "text": "仓储、物流、批发和本地配送看起来不性感，但很多从业者发现它们离真实需求更近。租金、人工、油价、订单稳定性和账期决定利润，平台流量只是入口。老行业的壁垒不在故事，而在网点、客户信任、库存周转和稳定交付。",
+      "comments": [
+        "我家做批发，利润不高但现金流稳定，客户关系比投流重要。",
+        "仓储最大成本是租金和损耗，不是大家想的搬货那么简单。",
+        "账期很关键，客户拖款两个月，小公司现金流就紧。",
+        "年轻人进来有优势，能把库存和客户数据整理清楚。"
+      ],
+      "like_count": 4800,
+      "collect_count": 2300,
+      "comment_count": 318,
+      "created_at": "2026-05-22",
+      "location": "",
+      "extraction_method": "fixture",
+      "errors": []
+    },
+    {
+      "id": "fixture-low-info-006",
+      "url": "https://www.xiaohongshu.com/explore/fixture-low-info-006",
+      "query": "表面看不懂 背后逻辑",
+      "title": "突然发现一个现象，大家怎么看",
+      "author": "样例作者F",
+      "text": "",
+      "comments": [
+        "蹲",
+        "mark",
+        "哈哈哈确实",
+        "求后续"
+      ],
+      "like_count": 1900,
+      "collect_count": 120,
+      "comment_count": 88,
+      "created_at": "2026-05-26",
+      "location": "",
+      "extraction_method": "search-card fallback",
+      "errors": [
+        "fixture low-info record"
+      ]
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "fixture data for smoke test only"
+  ]
+}

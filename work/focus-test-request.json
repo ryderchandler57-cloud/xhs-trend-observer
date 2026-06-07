@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "topic": "AI 传统产业 城市流动 教育体制 年轻人消费 信息差",
+    "created_at": "2026-06-02T21:24:51+08:00",
+    "source": "xiaohongshu",
+    "tool": "trend_xhs_observer",
+    "purpose": "寻找能解释真实运行逻辑、带来认知冲击的信息差内容",
+    "focus_topic_selection": "3,4",
+    "focus_topic_warnings": []
+  },
+  "query": "AI 传统产业 城市流动 教育体制 年轻人消费 信息差",
+  "expanded_queries": [
+    "城市流动 高铁 人口 真实原因",
+    "民航 高铁 时间成本",
+    "二线城市 一线项目 周末高铁",
+    "高铁 城市流动 年轻人 周末",
+    "考研 调剂 导师 体制 真实",
+    "国企 编制 年轻人 真实体验",
+    "中科院 读研 真实经历",
+    "体制内 年轻人 真实感受"
+  ],
+  "focus_topics": [
+    "城市、高铁、民航、人口流动背后的真实逻辑",
+    "教育、考研、体制、国企、中科院等系统真实运行方式"
+  ],
+  "output_schema": [
+    "现象",
+    "表面看起来是什么",
+    "背后真实逻辑",
+    "为什么最近开始出现",
+    "它反映了什么趋势",
+    "是否可能被夸大",
+    "值不值得继续深挖"
+  ],
+  "constraints": {
+    "avoid_hot_only": true,
+    "prioritize_comments": true,
+    "prioritize_information_gap": true,
+    "explain_why_not_just_summarize": true,
+    "max_notes": 30,
+    "per_query": 6,
+    "max_comments": 30,
+    "query_limit": 8
+  }
+}

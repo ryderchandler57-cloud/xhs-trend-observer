@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XHS Trend Observer - 关键词采集</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      background: #f4f6f1;
+      color: #202320;
+      line-height: 1.6;
+    }
+    .page { max-width: 980px; margin: 0 auto; padding: 28px 16px 52px; }
+    header { border-bottom: 1px solid #d9ded7; padding-bottom: 18px; margin-bottom: 18px; }
+    h1 { margin: 0; font-size: 30px; line-height: 1.2; }
+    p { color: #626a63; }
+    input, textarea, button { font: inherit; }
+    input, textarea {
+      width: 100%;
+      border: 1px solid #d9ded7;
+      border-radius: 8px;
+      background: #fff;
+      padding: 10px 12px;
+    }
+    textarea { min-height: 96px; resize: vertical; }
+    .panel {
+      background: #fff;
+      border: 1px solid #d9ded7;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 16px 38px rgba(32, 35, 32, .07);
+    }
+    .grid { display: grid; gap: 12px; }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .btn {
+      border: 1px solid #d9ded7;
+      background: #fff;
+      color: #202320;
+      min-height: 40px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn.primary { background: #202320; border-color: #202320; color: #fff; }
+    .command {
+      font-family: Consolas, "Courier New", monospace;
+      white-space: pre-wrap;
+      word-break: break-all;
+      border: 1px solid #d9ded7;
+      border-radius: 8px;
+      background: #f0f3ee;
+      padding: 10px;
+    }
+    .item { border-top: 1px solid #d9ded7; padding-top: 12px; margin-top: 12px; }
+    .muted { color: #626a63; }
+    @media (min-width: 760px) {
+      .two { grid-template-columns: 1fr 180px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p style="margin:0 0 6px;color:#bd3f32;font-weight:700">趋势与认知观察助手</p>
+      <h1>小红书关键词采集与 AI 分析</h1>
+      <p>输入关键词后生成可复制的 PowerShell 命令；批量命令会调用现有 DOM + Network + Gemini 流程。</p>
+    </header>
+
+    <section class="panel grid">
+      <div class="grid two">
+        <input id="keywordInput" placeholder="输入关键词，例如：AI 传统产业 信息差">
+        <input id="maxNotesInput" type="number" min="1" value="5" aria-label="MaxNotes">
+      </div>
+      <textarea id="keywordBulk" placeholder="也可以一行一个关键词，或用分号分隔"></textarea>
+      <div class="row">
+        <button class="btn primary" id="addBtn" type="button">添加关键词</button>
+        <button class="btn" id="bulkBtn" type="button">批量追加</button>
+        <button class="btn" id="copyBatchBtn" type="button">复制批量命令</button>
+        <button class="btn" id="downloadBtn" type="button">下载批处理</button>
+        <button class="btn" id="clearBtn" type="button">清空</button>
+      </div>
+      <div>
+        <strong>批量执行命令</strong>
+        <div class="command" id="batchCommand">添加关键词后生成批量执行命令。</div>
+      </div>
+      <div id="keywordList"></div>
+    </section>
+  </main>
+
+  <script>
+    const PROJECT_ROOT = 'C:\\Users\\dell\\Desktop\\xhs-trend-observer';
+    let keywords = JSON.parse(localStorage.getItem('xhsKeywordInterfaceQueue') || '[]');
+
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
+    }
+    function psQuote(value) { return String(value || '').replace(/"/g, '`"'); }
+    function maxNotes() {
+      const value = Number(document.getElementById('maxNotesInput').value || 5);
+      return Number.isFinite(value) && value > 0 ? Math.floor(value) : 5;
+    }
+    function singleCommand(keyword) {
+      return `.\\trend_xhs_observer.cmd -Query "${psQuote(keyword)}" -MaxNotes ${maxNotes()} -AIAnalyze`;
+    }
+    function batchCommand() {
+      if (!keywords.length) return '';
+      return `.\\run_keyword_batch.cmd -Keywords "${psQuote(keywords.map(item => item.keyword).join(';'))}" -MaxNotes ${maxNotes()}`;
+    }
+    function save() {
+      localStorage.setItem('xhsKeywordInterfaceQueue', JSON.stringify(keywords));
+    }
+    function addKeywordValue(value) {
+      const keyword = String(value || '').trim();
+      if (!keyword) return false;
+      if (!keywords.some(item => item.keyword === keyword)) keywords.push({ keyword });
+      save();
+      return true;
+    }
+    function addKeyword() {
+      const input = document.getElementById('keywordInput');
+      if (addKeywordValue(input.value)) {
+        input.value = '';
+        render();
+      } else {
+        alert('请输入关键词');
+      }
+    }
+    function addBulk() {
+      const input = document.getElementById('keywordBulk');
+      const rows = input.value.split(/[;\r\n]+/).map(item => item.trim()).filter(Boolean);
+      for (const row of rows) addKeywordValue(row);
+      input.value = '';
+      render();
+      if (!rows.length) alert('请输入至少一个关键词');
+    }
+    async function copyText(value) {
+      if (!value) return alert('请先添加关键词');
+      try {
+        await navigator.clipboard.writeText(value);
+        alert('命令已复制到剪贴板');
+      } catch {
+        prompt('复制这段命令：', value);
+      }
+    }
+    function downloadCmd() {
+      const command = batchCommand();
+      if (!command) return alert('请先添加关键词');
+      const content = ['@echo off', `cd /d "${PROJECT_ROOT}"`, command, 'pause', ''].join('\r\n');
+      const blob = new Blob([content], { type: 'application/octet-stream' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'run_xhs_keywords.cmd';
+      link.click();
+      URL.revokeObjectURL(url);
+    }
+    function render() {
+      document.getElementById('batchCommand').textContent = batchCommand() || '添加关键词后生成批量执行命令。';
+      document.getElementById('keywordList').innerHTML = keywords.length ? keywords.map((item, index) => {
+        const command = singleCommand(item.keyword);
+        return `<div class="item">
+          <strong>${index + 1}. ${escapeHtml(item.keyword)}</strong>
+          <div class="command">${escapeHtml(command)}</div>
+          <div class="row" style="margin-top:8px">
+            <button class="btn" type="button" data-copy="${index}">复制单条命令</button>
+            <button class="btn" type="button" data-remove="${index}">移除</button>
+          </div>
+        </div>`;
+      }).join('') : '<p class="muted">还没有添加关键词。</p>';
+    }
+
+    document.getElementById('addBtn').addEventListener('click', addKeyword);
+    document.getElementById('bulkBtn').addEventListener('click', addBulk);
+    document.getElementById('copyBatchBtn').addEventListener('click', () => copyText(batchCommand()));
+    document.getElementById('downloadBtn').addEventListener('click', downloadCmd);
+    document.getElementById('clearBtn').addEventListener('click', () => { keywords = []; save(); render(); });
+    document.getElementById('maxNotesInput').addEventListener('input', render);
+    document.getElementById('keywordInput').addEventListener('keydown', event => { if (event.key === 'Enter') addKeyword(); });
+    document.getElementById('keywordList').addEventListener('click', event => {
+      const copy = event.target.closest('[data-copy]');
+      const remove = event.target.closest('[data-remove]');
+      if (copy) {
+        const keyword = keywords[Number(copy.dataset.copy)]?.keyword;
+        if (keyword) copyText(singleCommand(keyword));
+      }
+      if (remove) {
+        keywords.splice(Number(remove.dataset.remove), 1);
+        save();
+        render();
+      }
+    });
+    render();
+  </script>
+</body>
+</html>

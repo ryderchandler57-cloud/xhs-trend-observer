@@ -1,0 +1,45 @@
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+
+# SQLite databases and runtime state
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.db-*
+data/*.sqlite
+data/*.sqlite-*
+
+# Collection outputs and media caches
+outputs/
+media/
+media_ocr_tmp/
+
+# Browser profiles / login sessions
+.xhs-profile-*/
+
+# Python caches and virtual environments
+__pycache__/
+**/__pycache__/
+*.pyc
+*.py[cod]
+.venv/
+.venv-ocr/
+
+# JavaScript dependencies
+node_modules/
+
+# Vendored/runtime caches
+vendor/
+.cache/
+
+# Logs
+logs/
+*.log
+
+# Local run state
+work/collected-note-ids.json
+work/screenshots/
+work/qa/
